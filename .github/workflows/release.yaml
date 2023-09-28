@@ -24,4 +24,4 @@ jobs:
           goarch: ${{ matrix.goarch }}
           project_path: "./cmd/ksync"
           binary_name: "ksync"
-          extra_files: LICENSE README.md
+          compress_assets: "OFF"
