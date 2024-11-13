@@ -56,6 +56,8 @@ var blockSyncCmd = &cobra.Command{
 		chainRest = utils.GetChainRest(chainId, chainRest)
 		storageRest = strings.TrimSuffix(storageRest, "/")
 
+		return fmt.Errorf("test error")
+
 		// if no binary was provided at least the home path needs to be defined
 		if binaryPath == "" && homePath == "" {
 			return errors.New("flag 'home' is required")
