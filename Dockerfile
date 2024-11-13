@@ -8,5 +8,4 @@ RUN go mod download
 COPY . .
 
 RUN make build
-
-CMD ["bats", "-T", "--print-output-on-failure", "--verbose-run", "tests"]
+RUN bats -T --print-output-on-failure --verbose-run tests
