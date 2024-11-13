@@ -13,12 +13,8 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker Image
+      - name: Build and Test Docker Image
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64
           tags: ksync:test
-
-      - name: Run e2e Tests
-        run: |
-          docker run --rm --platform linux/amd64 ksync:test
